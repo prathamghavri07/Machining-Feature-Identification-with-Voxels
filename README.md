@@ -19,6 +19,7 @@ A Binvox file in raw format looks like this
    data
    b'\x01\xff\x01\xff\x01\xff\x01\xff\x01\xff\x01\xff\x01\xff\x01\xff\x01\xff\x01
 
+Converted the Binvox file into array of (64,64,64) ,used labels from file names and the binvox data using binvox_rw to generate slices of the 3 d volume
    
 ![image](https://github.com/user-attachments/assets/43468c90-4907-4bb1-9ba7-1c5a3124f08b)
 
@@ -28,10 +29,11 @@ We have 24,000 models we have created 2 d slices to view the data
 
 A Deep 3D convolutional neural network to be our recognizer. The input of recognizer is the model with only single feature. And the output is the class input feature belonging to.
 You can find the data pipeline in the recognizer folder 
-1. Converted data into tensors
-2. batching the data
+1. Converted data into tensors (32,64,64,64)
+2. batching the data (batch_size=32)
 3. shuffling the data
 4. Training the model
+5. Used Tensorboard & Early Stop Callbacks
 
 ## Axis of attack
 We Determined the axis of attack by figuring out the 0s in the matrix and using the same axis x/y/z axis as axis of attack

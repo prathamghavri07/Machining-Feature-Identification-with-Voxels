@@ -18,13 +18,20 @@ A Binvox file in raw format looks like this
    scale 10
    data
    b'\x01\xff\x01\xff\x01\xff\x01\xff\x01\xff\x01\xff\x01\xff\x01\xff\x01\xff\x01
+
+   
 ![image](https://github.com/user-attachments/assets/43468c90-4907-4bb1-9ba7-1c5a3124f08b)
 
-We have 24,000 models so we have created a 
+We have 24,000 models we have created 2 d slices to view the data 
 
 ## Recognizer
 
 A Deep 3D convolutional neural network to be our recognizer. The input of recognizer is the model with only single feature. And the output is the class input feature belonging to.
+You can find the data pipeline in the recognizer folder 
+1. Converted data into tensors
+2. batching the data
+3. shuffling the data
+4. Training the model
 
 ## Axis of attack
 We Determined the axis of attack by figuring out the 0s in the matrix and using the same axis x/y/z axis as axis of attack

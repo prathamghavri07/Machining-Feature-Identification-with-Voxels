@@ -43,6 +43,9 @@ We used the COM of the 0s coordinates to find the point of attack and the depth 
    ![image](https://github.com/user-attachments/assets/b8964dd5-424a-4180-9fb3-7552223ed5a5)
 
 2. Grad Cam
+   This indicates multiple sclices and what neuron is activated for that localised class
+   Truth label : 2
+   
   ![image](https://github.com/user-attachments/assets/43173b1a-c726-4b9c-b7ba-d5aecba492ca)
   ![image](https://github.com/user-attachments/assets/a4192776-59fd-4f1e-9233-b919f0fa72e5)
 
